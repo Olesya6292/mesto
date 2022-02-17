@@ -11,14 +11,19 @@
 
 <body class="page">
     <div class="page__container">
+
+        <!--HEADER-->
+
         <header class="header page__header">
             <img src="./images/logo.svg" alt="Логотип Место" class="header__logo">
         </header>
 
+        <!--CONTENT-->
+
         <main class="content page__content">
             <section class="profile">
                 <div class="profile__container">
-                    <img src="./images/photo-avatar.jpg" alt="Фото-аватар" class="profile__avatar">
+                    <div class="profile__avatar"></div>
                     <div class="profile__info">
                         <div class="profile__name">
                             <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -26,84 +31,95 @@
                         </div>
                         <p class="profile__subtitle">Исследователь океана</p>
                     </div>
-                    <button class="profile__add-button" type="button"></button>
                 </div>
-            </section>
-            <section class="photo-elements">
-                <ul class="photo-element">
-                    <li class="photo-element__item">
-                        <div class="photo-element__img">
-                            <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="photo-element__image">
-                        </div>
-                        <div class="photo-element__info">
-                            <h2 class="photo-element__title">Карачаевск</h2>
-                            <button class="photo-element__like" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="photo-element">
-                    <li class="photo-element__item">
-                        <div class="photo-element__img">
-                            <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="photo-element__image">
-                        </div>
-                        <div class="photo-element__info">
-                            <h2 class="photo-element__title">Гора Эльбрус</h2>
-                            <button class="photo-element__like" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="photo-element">
-                    <li class="photo-element__item">
-                        <div class="photo-element__img">
-                            <img src="./images/dombai.jpg" alt="Домбай" class="photo-element__image">
-                        </div>
-                        <div class="photo-element__info">
-                            <h2 class="photo-element__title">Домбай</h2>
-                            <button class="photo-element__like" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="photo-element">
-                    <li class="photo-element__item">
-                        <div class="photo-element__img">
-                            <img src="./images/kamchatka.jpg" alt="Камчатка" class="photo-element__image">
-                        </div>
-                        <div class="photo-element__info">
-                            <h2 class="photo-element__title">Камчатка</h2>
-                            <button class="photo-element__like" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="photo-element">
-                    <li class="photo-element__item">
-                        <div class="photo-element__img">
-                            <img src="./images/osetia.jpg" alt="Северная Осетия" class="photo-element__image">
-                        </div>
-                        <div class="photo-element__info">
-                            <h2 class="photo-element__title">Северная Осетия</h2>
-                            <button class="photo-element__like" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="photo-element">
-                    <li class="photo-element__item">
-                        <div class="photo-element__img">
-                            <img src="./images/sochi.jpg" alt="Сочи" class="photo-element__image">
-                        </div>
-                        <div class="photo-element__info">
-                            <h2 class="photo-element__title">Сочи</h2>
-                            <button class="photo-element__like" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
+                <button class="profile__add-button" type="button"></button>
 
             </section>
+            <section class="cards">
+                <ul class="card">
+                    <li class="card__item">
+                        <div class="card__image card__image_karachaevsk"></div>
+                        <div class="card__info">
+                            <h2 class="card__title">Карачаевск</h2>
+                            <button class="card__like-button" type="button"></button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="card">
+                    <li class="card__item">
+                        <div class="card__image card__image_elbrus"></div>
+                        <div class="card__info">
+                            <h2 class="card__title">Гора Эльбрус</h2>
+                            <button class="card__like-button" type="button"></button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="card">
+                    <li class="card__item">
+                        <div class="card__image card__image_dombai"></div>
+                        <div class="card__info">
+                            <h2 class="card__title">Домбай</h2>
+                            <button class="card__like-button" type="button"></button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="card">
+                    <li class="card__item">
+                        <div class="card__image card__image_kamchatka"></div>
+                        <div class="card__info">
+                            <h2 class="card__title">Камчатка</h2>
+                            <button class="card__like-button" type="button"></button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="card">
+                    <li class="card__item">
+                        <div class="card__image card__image_osetia"></div>
+                        <div class="card__info">
+                            <h2 class="card__title">Северная Осетия</h2>
+                            <button class="card__like-button" type="button"></button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="card">
+                    <li class="card__item">
+                        <div class="card__image card__image_sochi"></div>
+                        <div class="card__info">
+                            <h2 class="card__title">Сочи</h2>
+                            <button class="card__like-button" type="button"></button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
         </main>
-        <footer class="footer">
+
+        <!--FOOTER-->
+
+        <footer class="footer page__content">
             <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
         </footer>
     </div>
 
+    <!--POPUP EDIT BUTTON-->
+
+    <div class="popup">
+        <div class="popup__container">
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <form action="" class="popup__form">
+
+                <label for="name" class="popup__label">Имя</label>
+                <input type="text" name="name" id="name" placeholder="Ваше имя" class="popup__input popup__input_name" required>
+
+
+                <label for="profession" class="popup__label">Профессия</label>
+                <input type="text" name="profession" id="profession" placeholder="Вид деятельности" class="popup__input popup__input_profession" required>
+
+                <button type="submit" class="popup__save">Сохранить</button>
+            </form>
+            <button type="button" class="popup__close"></button>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
