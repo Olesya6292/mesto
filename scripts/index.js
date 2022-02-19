@@ -1,11 +1,10 @@
 "use strict";
 
-
 const container = document.querySelector('.profile__container');
 const popup = document.querySelector('.popup');
 const editButton = container.querySelector('.profile__edit-button');
 const popupForm = popup.querySelector('.popup__form');
-let closeButton = popup.querySelector('.popup__close');
+const closeButton = popup.querySelector('.popup__close');
 
 
 
@@ -17,12 +16,14 @@ let jobProfile = container.querySelector('.profile__subtitle');
 
 function popupOpened() {
     popup.classList.add('popup_opened');
+    document.body.classList.add('page_disabled');
     nameInput.value = nameProfile.textContent;
     jobInput.value = jobProfile.textContent;
 }
 
 function popupClosed() {
     popup.classList.remove('popup_opened');
+    document.body.classList.remove('page_disabled');
 }
 
 
