@@ -5,5 +5,16 @@
     font-size: 14px;
     line-height: 1.21;
     color: #000000;
-    padding-bottom: 13px;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+
+.popup__input:last-of-type {
+    margin-bottom: 0;
+}
+
+.popup__input:focus {
+    outline: none;
+    border: 1px solid blue;
+    border-radius: 5px;
 }

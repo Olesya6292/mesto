@@ -1,9 +1,9 @@
 .cards {
-    padding-bottom: 67px;
+    padding-bottom: 70px;
 }
 
 @media screen and (max-width: 767px) {
     .cards {
-        padding-bottom: 48px;
+        padding-bottom: 55px;
     }
 }

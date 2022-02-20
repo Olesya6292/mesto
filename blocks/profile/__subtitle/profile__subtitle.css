@@ -1,5 +1,5 @@
 .profile__subtitle {
-    margin: 16px 0 0 0;
+    margin: 10px 0 0 0;
     font-size: 18px;
     line-height: 1.22;
     text-overflow: ellipsis;
@@ -9,7 +9,8 @@
 
 @media screen and (max-width: 767px) {
     .profile__subtitle {
-        text-align: center;
-        margin: 14px 0 0 0;
+        font-size: 14px;
+        line-height: 1.21;
+        margin: 6px 0 0 16px;
     }
 }
