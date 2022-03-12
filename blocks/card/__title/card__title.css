@@ -2,6 +2,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    width: 80%;
     margin: 0;
     margin-right: 20px;
     color: #000000;
