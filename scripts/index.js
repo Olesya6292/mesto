@@ -83,7 +83,7 @@ const createCard = (data) => {
     cardTitle.textContent = data.name;
 
     cardLikeBtn.addEventListener('click', switchLikeBtn);
-    cardDeleteBtn.addEventListener('click', clickDeleteBtn);
+    cardDeleteBtn.addEventListener('click', deleteCard);
     togglePopupImg(cardImage);
 
     return cardElement;
@@ -94,7 +94,7 @@ function switchLikeBtn(evt) {
     evt.target.classList.toggle('card__like-button_active');
 }
 
-function clickDeleteBtn(evt) {
+function deleteCard(evt) {
     evt.target.closest('.card').remove();
 }
 
