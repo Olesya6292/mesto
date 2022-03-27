@@ -27,12 +27,12 @@
                     <div class="profile__info">
                         <div class="profile__name">
                             <h1 class="profile__title">Жак-Ив Кусто</h1>
-                            <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+                            <button class="profile__edit-button popup__open" type="button" aria-label="Редактировать профиль"></button>
                         </div>
                         <p class="profile__subtitle">Исследователь океана</p>
                     </div>
                 </div>
-                <button class="profile__add-button" type="button" aria-label="Добавить фото"></button>
+                <button class="profile__add-button popup__open" type="button" aria-label="Добавить фото"></button>
 
             </section>
             <section class="cards" aria-label="Карточки">
@@ -53,13 +53,15 @@
     <div class="popup popup_type_edit">
         <div class="popup__container">
             <h3 class="popup__title">Редактировать профиль</h3>
-            <form class="popup__form form-edit" name="formEdit">
+            <form class="popup__form form-edit" name="formEdit" novalidate>
 
-                <input type="text" name="name" id="name" placeholder="Ваше имя" class="popup__input popup__input_type_name" required>
+                <input type="text" name="name" id="name-input" placeholder="Ваше имя" class="popup__input popup__input_type_name" required minlength="2" maxlength="40">
+                <span class="popup__input-error name-input-error"></span>
 
-                <input type="text" name="profession" id="profession" placeholder="Вид деятельности" class="popup__input popup__input_type_profession" required>
+                <input type="text" name="profession" id="profession-input" placeholder="Вид деятельности" class="popup__input popup__input_type_profession" required minlength="2" maxlength="200">
+                <span class="popup__input-error profession-input-error"></span>
 
-                <button type="submit" class="popup__save">Сохранить</button>
+                <button type="submit" class="popup__submit popup__submit_type_edit">Сохранить</button>
             </form>
             <button type="button" class="popup__close popup__close_type_edit" aria-label="Закрыть"></button>
         </div>
@@ -71,13 +73,15 @@
     <div class="popup popup_type_add">
         <div class="popup__container">
             <h3 class="popup__title">Новое место</h3>
-            <form class="popup__form form-add" name="formAdd">
+            <form class="popup__form form-add" name="formAdd" novalidate>
 
-                <input type="text" name="title" id="title" placeholder="Название" class="popup__input popup__input_type_title" required>
+                <input type="text" name="title" id="title-input" placeholder="Название" class="popup__input popup__input_type_title" required minlength="2" maxlength="30">
+                <span class="popup__input-error title-input-error"></span>
 
-                <input type="text" name="link" id="link" placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" required>
+                <input type="url" name="link" id="link-input" placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" required>
+                <span class="popup__input-error link-input-error"></span>
 
-                <button type="submit" class="popup__save">Создать</button>
+                <button type="submit" class="popup__submit popup__submit_type_add">Создать</button>
             </form>
             <button type="button" class="popup__close popup__close_type_add" aria-label="Закрыть"></button>
         </div>
@@ -109,8 +113,9 @@
     </li>
 </template>
 
-
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
+
 </body>
 
 </html>
