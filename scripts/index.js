@@ -45,10 +45,16 @@ function submitProfileForm(evt) {
 
 }
 
-function renderCard(card) {
 
-    const cardElement = new Card(card, cardSelector);
+function createCard(card, cardSelector) {
+    return new Card(card, cardSelector);
+}
+
+
+function renderCard(card) {
+    const cardElement = createCard(card, cardSelector);
     cardContainer.prepend(cardElement.generateCard());
+
 }
 
 function handleCardFormSubmit(evt) {
