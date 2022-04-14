@@ -1,20 +1,18 @@
-import { popupImage, popupTypeImage, popupImageCaption, openPopup } from "./index.js";
+import { popupImage, popupTypeImage, popupImageCaption, openPopup } from "./utils.js";
 
 export class Card {
     constructor(data, cardSelector) {
-        this._name = data.name,
-            this._link = data.link,
-            this._cardSelector = cardSelector
+        this._name = data.name;
+        this._link = data.link;
+        this._cardSelector = cardSelector;
     }
 
     _getTemplate() {
-        const cardElement = document
+        return document
             .querySelector(this._cardSelector)
             .content
             .querySelector('.card')
             .cloneNode(true);
-
-        return cardElement;
     }
 
 
