@@ -1,15 +1,9 @@
 export {
-    popupImage,
-    popupTypeImage,
-    popupImageCaption,
     openPopup,
     closePopup,
     closeByEsc
 };
 
-const popupTypeImage = document.querySelector('.popup_type_image');
-const popupImage = document.querySelector('.popup__image');
-const popupImageCaption = document.querySelector('.popup__caption');
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
