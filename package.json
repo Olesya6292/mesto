@@ -1,13 +1,14 @@
 {
-    "name": "package.json",
+    "name": "Mesto",
     "version": "1.0.0",
-    "description": "Yandex Practikum\u001b[D\u001b[D\u001b[D\u001b[D\u001b[k\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C project",
+    "description": "Yandex Practikum project",
     "main": "index.js",
+    "homepage": "https://olesya6292.github.io/mesto/",
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack serve",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d build"
     },
     "repository": {
         "type": "git",
