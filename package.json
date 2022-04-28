@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "Yandex Practikum project",
     "main": "index.js",
-    "homepage": "https://olesya6292.github.io/mesto/",
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack serve",
