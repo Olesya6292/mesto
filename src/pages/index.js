@@ -1,5 +1,4 @@
 import "./index.css";
-import { initialCards } from "../components/initialCards.js";
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import Section from '../components/Section.js';
@@ -7,11 +6,14 @@ import UserInfo from '../components/UserInfo.js';
 import PopupWithImage from '../components/PopupWithImage.js';
 import PopupWithForm from '../components/PopupWithForm.js';
 import {
+    initialCards,
     popupEdit,
     popupAdd,
     popupTypeImage,
     nameProfile,
     jobProfile,
+    cardsTemplate,
+    cardsContainer,
     popupFormEdit,
     popupFormAdd,
     nameInput,
@@ -21,7 +23,7 @@ import {
     editButton,
     addButton,
     validationConfig
-} from '../components/constants.js';
+} from '../utils/constants.js';
 
 
 const formEditValidator = new FormValidator(popupFormEdit, validationConfig);
@@ -37,7 +39,7 @@ const handleCardClick = (name, link) => {
 };
 
 const createCard = (data) => {
-    const card = new Card(data, '.cards-template', handleCardClick);
+    const card = new Card(data, cardsTemplate, handleCardClick);
     return card.generateCard();
 };
 
@@ -48,7 +50,7 @@ const cardListSection = new Section({
             cardListSection.addItem(card);
         },
     },
-    '.cards__list');
+    cardsContainer);
 
 const popupEditForm = new PopupWithForm(popupEdit, {
     handleFormSubmit: () => {

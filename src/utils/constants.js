@@ -1,8 +1,50 @@
+const karachaevsk = new URL('../images/karachaevsk.jpg',
+    import.meta.url);
+const elbrus = new URL('../images/elbrus.jpg',
+    import.meta.url);
+const dombai = new URL('../images/dombai.jpg',
+    import.meta.url);
+const kamchatka = new URL('../images/kamchatka.jpg',
+    import.meta.url);
+const osetia = new URL('../images/osetia.jpg',
+    import.meta.url);
+const sochi = new URL('../images/sochi.jpg',
+    import.meta.url);
+
+
+export const initialCards = [{
+        name: 'Карачаевск',
+        link: karachaevsk
+    },
+    {
+        name: 'Гора Эльбрус',
+        link: elbrus
+    },
+    {
+        name: 'Домбай',
+        link: dombai
+    },
+    {
+        name: 'Камчатка',
+        link: kamchatka
+    },
+    {
+        name: 'Северная Осетия',
+        link: osetia
+    },
+    {
+        name: 'Сочи',
+        link: sochi
+    }
+];
+
 export const popupEdit = '.popup_type_edit';
 export const popupAdd = '.popup_type_add';
 export const popupTypeImage = '.popup_type_image';
 export const nameProfile = '.profile__title';
 export const jobProfile = '.profile__subtitle';
+export const cardsTemplate = '.cards-template';
+export const cardsContainer = '.cards__list';
 export const popupFormEdit = document.querySelector('.form-edit');
 export const popupFormAdd = document.querySelector('.form-add');
 export const nameInput = document.querySelector('.popup__input_type_name');
