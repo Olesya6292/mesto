@@ -22,7 +22,12 @@
         <main class="content page__content">
             <section class="profile">
                 <div class="profile__container">
-                    <div class="profile__avatar"></div>
+
+                    <div class="profile__avatar">
+                        <img src='<%=require("./images/photo-avatar.jpg")%>' alt="Аватар" class="profile__avatar-photo">
+                        <div class="profile__avatar-cover"></div>
+                    </div>
+
                     <div class="profile__info">
                         <div class="profile__name">
                             <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -99,6 +104,34 @@
         </div>
     </div>
 
+    <!--POPUP AVATAR-->
+
+    <div class="popup popup_type_avatar">
+        <div class="popup__container">
+            <h3 class="popup__title">Обновить аватар</h3>
+            <form class="popup__form form-avatar" name="formAvatar" novalidate>
+
+                <input type="url" name="link-avatar" id="link-input-avatar" placeholder="Ссылка на картинку" class="popup__input popup__input_type_link-avatar" required>
+                <span class="popup__input-error link-input-avatar-error"></span>
+
+                <button type="submit" class="popup__submit popup__submit_type_edit">Сохранить</button>
+            </form>
+            <button type="button" class="popup__close popup__close_type_edit" aria-label="Закрыть"></button>
+        </div>
+    </div>
+
+    <!--POPUP DELETE CARD-->
+
+    <div class="popup popup_type_delete">
+        <div class="popup__container">
+            <h3 class="popup__title">Вы уверены?</h3>
+            <form class="popup__form form-delete" name="formDelete" novalidate>
+                <button type="submit" class="popup__submit popup__submit_type_edit">Да</button>
+            </form>
+            <button type="button" class="popup__close popup__close_type_edit" aria-label="Закрыть"></button>
+        </div>
+    </div>
+
     <!--Template cards-->
 
     <template class="cards-template">
@@ -107,7 +140,10 @@
         <button class="card__delete"></button>
         <div class="card__info">
             <h2 class="card__title"></h2>
+            <div class="card__like-section">
             <button class="card__like-button"></button>
+            <span class="card__like-button-count">0</span>
+</div>
         </div>
     </li>
 </template>

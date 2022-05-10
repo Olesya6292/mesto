@@ -1,6 +1,7 @@
 .profile__avatar {
-    background: url(../../../images/photo-avatar.jpg) center / cover no-repeat;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    position: relative;
+}
+
+.profile__avatar:hover .profile__avatar-cover {
+    opacity: 0.8;
 }
