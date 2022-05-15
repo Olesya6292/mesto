@@ -1,43 +1,3 @@
-const karachaevsk = new URL('../images/karachaevsk.jpg',
-    import.meta.url);
-const elbrus = new URL('../images/elbrus.jpg',
-    import.meta.url);
-const dombai = new URL('../images/dombai.jpg',
-    import.meta.url);
-const kamchatka = new URL('../images/kamchatka.jpg',
-    import.meta.url);
-const osetia = new URL('../images/osetia.jpg',
-    import.meta.url);
-const sochi = new URL('../images/sochi.jpg',
-    import.meta.url);
-
-
-export const initialCards = [{
-        name: 'Карачаевск',
-        link: karachaevsk
-    },
-    {
-        name: 'Гора Эльбрус',
-        link: elbrus
-    },
-    {
-        name: 'Домбай',
-        link: dombai
-    },
-    {
-        name: 'Камчатка',
-        link: kamchatka
-    },
-    {
-        name: 'Северная Осетия',
-        link: osetia
-    },
-    {
-        name: 'Сочи',
-        link: sochi
-    }
-];
-
 export const popupEdit = '.popup_type_edit';
 export const popupAdd = '.popup_type_add';
 export const popupAvatar = '.popup_type_avatar';
@@ -49,14 +9,11 @@ export const cardsContainer = '.cards__list';
 export const popupDelete = '.popup_type_delete';
 export const formAvatar = document.querySelector('.form-avatar');
 export const editAvatar = document.querySelector('.profile__avatar');
-export const profilePhoto = document.querySelector('.profile__avatar-photo');
-export const linkInputAvatar = document.querySelector('.popup__input_type_link-avatar');
+export const profilePhoto = '.profile__avatar-photo';
 export const popupFormEdit = document.querySelector('.form-edit');
 export const popupFormAdd = document.querySelector('.form-add');
 export const nameInput = document.querySelector('.popup__input_type_name');
 export const jobInput = document.querySelector('.popup__input_type_profession');
-export const titleInput = document.querySelector('.popup__input_type_title');
-export const linkInput = document.querySelector('.popup__input_type_link');
 export const editButton = document.querySelector('.profile__edit-button');
 export const addButton = document.querySelector('.profile__add-button');
 

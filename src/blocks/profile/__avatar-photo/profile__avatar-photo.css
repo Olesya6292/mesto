@@ -5,4 +5,5 @@
     width: 120px;
     overflow: hidden;
     object-fit: cover;
+    display: block;
 }
