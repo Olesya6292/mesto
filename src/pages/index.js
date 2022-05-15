@@ -29,7 +29,6 @@ import {
   popupDelete
 } from '../utils/constants.js';
 
-let userId;
 
 const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-41',
@@ -77,7 +76,6 @@ const createCard = (cardData) => {
       userId: userInfo._id
     },
     handleCardClick: (name, link) => {
-
       openPopupImage.open(name, link);
     },
     handleLikeClick: (card) => {
@@ -130,6 +128,7 @@ const popupEditForm = new PopupWithForm(popupEdit, {
         userInfo.setUserInfo({
           name: infoData.name,
           description: infoData.about,
+          avatar: infoData.avatar
         })
       })
       .catch(err => console.log(err))
@@ -145,8 +144,11 @@ const popupAvatarForm = new PopupWithForm(popupAvatar, {
         avatar: data["link-avatar"]
       })
       .then((data) => {
+        console.log(data)
         userInfo.setUserInfo({
-          avatar: data.avatar,
+          name: data.name,
+          description: data.about,
+          avatar: data.avatar
         })
       })
       .catch(err => console.log(err))
@@ -158,15 +160,14 @@ const popupAvatarForm = new PopupWithForm(popupAvatar, {
 
 
 const popupAddForm = new PopupWithForm(popupAdd, {
-  handleFormSubmit: (data) => {
-
+   handleFormSubmit: (data) => {
     popupAddForm.renderLoading(true),
       api.addCard({
         name: data.title,
         link: data.link
       })
       .then(data => {
-        console.log(data)
+        
         const newCard = createCard(data);
         cardListSection.addItem(newCard);
       })
